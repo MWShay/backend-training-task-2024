@@ -8,6 +8,10 @@
 
 // 1.1 範例
 const alexAge = 25;
+const alexMembershipID = "GYM2024-12345";
+const isRunningOnTreadmill = true;
+
+console.log(alexAge, alexmembershipID, isRunningOnTreadmill);
 
 // ### 題目二：變數命名練習
 // - 瑜伽團課 - 300 元
@@ -16,10 +20,10 @@ const alexAge = 25;
 // 情境：Alex 這個月的運動預算有 3000 元
 // 請修改以下中文變數名稱，讓他符合變數語意
 
-const 變數一 = 300;
-const 變數二 = 500;
-const 變數三 = 1500;
-const 變數四 = 3000;
+const courseYoga = 300;
+const courseＷorkout = 500;
+const course1on1 = 1500;
+const alexBudget = 3000;
 
 // ### 題目三：變數計算
 // 呈上題，Alex 想要規劃好自己的運動課程，需符合以下三個條件，請將花費總數計算在 AlexBudget 上，一起幫幫他吧！
@@ -61,7 +65,13 @@ console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 // 她本週參加了 2 堂團體課程。
 
 let totalBill = 0;
-const machineUsePrice = 50;
+const machineUsePrice = 50; // 每小時器械使用費 50 元
+const groupClassPrice = 150; // 每堂團體課程費用 150 元
+
+let machineUsePriceTotal = machineUsePrice * 3;
+let groupClassesTotal = groupClassPrice * 2;
+totalBill = machineUsePriceeTotal + groupClassesTotal; // 計算總花飛
+total = totalBill //賦予值給消費金額
 
 console.log(
   `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${total}元`
@@ -71,24 +81,33 @@ console.log(
 // 情境：請依照以下程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 let a = 8; // 範例：宣告了一個 a 的變數，並賦予了一個 8 的數字型別
-let b = 0;
-a = 13;
-a = b + 4;
-a - b;
-b += 1;
+let b = 0; // 宣告了一個 b 的變數，並賦予了一個 0 的數字型別
+a = 13; // 賦予變數 a 數字型別 13
+a = b + 4; // 賦予變數 a "變數 b + 4 的結果"
+a - b; // 計算變數 a 減去 變數 b 的結果
+b += 1; // 賦予變數 b "變數 b + 1 的結果"
 
 // ### 題目九：型別查詢
 // 請不要觀看 console.log，透過註解告知解答每個變數的型別
-let c = 'world';
-let d = 456;
-let e = c + d;
-let f = false;
-let g = d + d;
-let h = f + g;
+let c = 'world'; // c 是 string
+let d = 456; 
+let e = c + d; 
+let f = false; 
+let g = d + d; 
+let h = f + g; 
 
 // 請從以下新增註解，告知上面每行各別是哪些型別
 // a 是 string
 // b 是 ???
+
+// a 是 number
+// b 是 number
+// c 是 string
+// d 是 number
+// e 是 string
+// f 是 boolean
+// g 是 number
+//h 是 boolean
 
 // ### 題目十：傳值與傳參考
 // 情境：請依照程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
