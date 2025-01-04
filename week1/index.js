@@ -8,7 +8,7 @@
 
 // 1.1 範例
 const alexAge = 25;
-const alexMembershipID = "GYM2024-12345";
+const alexmembershipID = "GYM2024-12345";
 const isRunningOnTreadmill = true;
 
 console.log(alexAge, alexmembershipID, isRunningOnTreadmill);
@@ -21,9 +21,9 @@ console.log(alexAge, alexmembershipID, isRunningOnTreadmill);
 // 請修改以下中文變數名稱，讓他符合變數語意
 
 const courseYoga = 300;
-const courseＷorkout = 500;
+const courseWorkout = 500;
 const course1on1 = 1500;
-const alexBudget = 3000;
+let AlexBudget = 3000;
 
 // ### 題目三：變數計算
 // 呈上題，Alex 想要規劃好自己的運動課程，需符合以下三個條件，請將花費總數計算在 AlexBudget 上，一起幫幫他吧！
@@ -31,17 +31,33 @@ const alexBudget = 3000;
 // 條件二：瑜伽團課只能一次買 3 堂
 // 條件三：一定要花到 2400 以上，並購買 5 堂課程
 
+AlexBudget -= courseWorkout;
+AlexBudget -= courseYoga * 3;
+AlexBudget -= course1on1;
+
 console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 // ### 題目四：線稿圖截圖，看圖宣告變數
 // 請參考資料夾內 q4.webp 圖片
 // 請依照你看到的內容來嘗試設計變數和值（至少 3 個）
+let packagePrice = 2520;
+let classes = 14;
+let discount = 0.9;
 
 // ### 題目五：布林值與變數定義，看是否有用對 const, let
 // 情境：Alex 在往健身房的路上，望向城市的風景，請描述她看到的一切，並宣告變數與賦予值
 // 4-1. Alex 在等紅綠燈，他抬頭看一下現在是紅燈，還有 28 秒綠燈（最多 3 個宣告）
 // 4-2. 目前一起等待的機車有 8 台
 // 4.3. Alex 望向天空，看到天上有 5 朵白雲和 1 顆太陽
+
+let trafficLight ={
+  colors: ["red", "yellow","green"],
+  second: [28,0,0],
+  isPass: false
+}
+let motorcycle = 8;
+let clouds = 8;
+const sun = 1;
 
 // ### 題目六：情境題：簡單變數計算
 // 情境：Alex 每天都會帶著 2000cc 的水壺
@@ -54,6 +70,9 @@ console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 let myWater = 2000; // 水壺容量
 myWater -= 500; // 早上喝了 500cc
+myWater -= 800;
+myWater += 1000;
+myWater -= 700;
 
 console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
@@ -70,7 +89,7 @@ const groupClassPrice = 150; // 每堂團體課程費用 150 元
 
 let machineUsePriceTotal = machineUsePrice * 3;
 let groupClassesTotal = groupClassPrice * 2;
-totalBill = machineUsePriceeTotal + groupClassesTotal; // 計算總花飛
+totalBill = machineUsePriceTotal + groupClassesTotal; // 計算總花費
 total = totalBill //賦予值給消費金額
 
 console.log(
@@ -107,14 +126,21 @@ let h = f + g;
 // e 是 string
 // f 是 boolean
 // g 是 number
-//h 是 boolean
+// h 是 number
 
 // ### 題目十：傳值與傳參考
 // 情境：請依照程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 
-let numberArr1 = [5, 10, 15];
+let numberArr1 = [5, 10, 15]; 
 let numberArr2 = numberArr1;
 numberArr2.push(20);
 numberArr2 = [25, 30, 35];
 console.log(numberArr1, numberArr2);
+
+// Ans:[5,10,15,20] [20,30,35]
+//1.宣告變數 numberArr1 賦予一陣列 [5,10,15]
+//2.宣告變數 numberArr2 賦予同numberArr1變數的陣列記憶體位址
+//3.在 numberArr2 所指向的陣列(同numberArr1)中加入元素 20
+//4.重新賦予變數numberArr2 陣列[20,30,35]
+//5.印出變數numberArr1 與變數numberArr2 的所指向陣列的內容
